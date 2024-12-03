@@ -1,5 +1,4 @@
 ## **Project: Theme Park Adventure System**
-
 ---
 
 ### **Introduction to Object-Oriented Programming (OOP)**
@@ -11,7 +10,7 @@ Object-Oriented Programming (OOP) is a paradigm that structures software into re
 ### **Key Concepts for this Project**
 
 #### 1. **Encapsulation**
-Encapsulation involves bundling data (attributes) and methods (functions) together and restricting access to some details. In Python, we use **private attributes** (prefixed with `_` or `__`) to hide data from direct access, ensuring changes happen only through controlled methods.
+Encapsulation involves bundling data (attributes) and methods (functions) together and restricting access to some details. In Python, we use **private attributes** (prefixed with `__`) to hide data from direct access, ensuring changes happen only through controlled methods.
 
 **Example**:  
 ```python
@@ -58,8 +57,8 @@ Your task is to design a **Theme Park Adventure System** using OOP principles. T
 A base class for all attractions at the theme park.
 
 **Attributes**:  
-- `_name` (private): Name of the attraction.  
-- `_capacity` (private): Maximum number of people the attraction can hold.  
+- `__name` (private): Name of the attraction.  
+- `__capacity` (private): Maximum number of people the attraction can hold.  
 
 **Methods**:  
 - `__init__(name, capacity)`: Initializes the attraction's name and capacity.  
@@ -76,7 +75,7 @@ Represents high-adrenaline rides like roller coasters.
 
 **Attributes**:  
 - Inherits all attributes from `Attraction`.  
-- `_min_height` (private): Minimum height required to ride (in cm).  
+- `__min_height` (private): Minimum height required to ride (in cm).  
 
 **Methods**:  
 - `__init__(name, capacity, min_height)`: Initializes all attributes, including the new one.  
@@ -90,7 +89,7 @@ Represents family-friendly rides like carousels.
 
 **Attributes**:  
 - Inherits all attributes from `Attraction`.  
-- `_min_age` (private): Minimum age to ride.  
+- `__min_age` (private): Minimum age to ride.  
 
 **Methods**:  
 - `__init__(name, capacity, min_age)`: Initializes all attributes, including the new one.  
@@ -105,8 +104,8 @@ Represents family-friendly rides like carousels.
 A base class for all theme park staff.
 
 **Attributes**:  
-- `_name` (private): Staff name.  
-- `_role` (private): Role of the staff member (e.g., "Operator").  
+- `__name` (private): Staff name.  
+- `__role` (private): Role of the staff member (e.g., "Operator").  
 
 **Methods**:  
 - `__init__(name, role)`: Initializes the staff details.  
@@ -118,9 +117,9 @@ A base class for all theme park staff.
 A class representing visitors at the theme park.
 
 **Attributes**:  
-- `_name` (private): Visitor's name.  
-- `_age` (private): Visitor's age.  
-- `_height` (private): Visitor's height in cm.  
+- `__name` (private): Visitor's name.  
+- `__age` (private): Visitor's age.  
+- `__height` (private): Visitor's height in cm.  
 
 **Methods**:  
 - `__init__(name, age, height)`: Initializes the visitor details.  
@@ -161,7 +160,7 @@ Develop a **Park Management System** with the following additional features:
 
 #### 1. **Staff Management**  
 Add a `Manager` subclass to `Staff` with attributes:  
-- `_team` (private): A list of `Staff` objects reporting to the manager.  
+- `__team` (private): A list of `Staff` objects reporting to the manager.  
 
 **Methods**:  
 - `add_staff(staff)`: Adds a `Staff` object to the manager's team.  
@@ -195,7 +194,3 @@ carousel = FamilyRide("Merry-Go-Round", 30, 4)
 visitor.ride(carousel)  # Output: "Alice is enjoying the Merry-Go-Round!"
 visitor.view_history()  # Output: ["Merry-Go-Round"]
 ```
-
----
-
-This extended and modular design ensures students practice all core OOP principles with increasing complexity, focusing on encapsulation, polymorphism, and interaction between objects.
