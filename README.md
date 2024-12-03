@@ -10,17 +10,17 @@ Object-Oriented Programming (OOP) is a paradigm that structures software into re
 ### **Key Concepts for this Project**
 
 #### 1. **Encapsulation**
-Encapsulation involves bundling data (attributes) and methods (functions) together and restricting access to some details. In Python, we use **private attributes** (prefixed with `__`) to hide data from direct access, ensuring changes happen only through controlled methods.
+Encapsulation involves bundling data (attributes) and methods (functions) together and restricting access to some details. In Python, we use **private attributes** (prefixed with `_`) to hide data from direct access, ensuring changes happen only through controlled methods.
 
 **Example**:  
 ```python
 class Ride:
     def __init__(self, name, duration):
-        self.__name = name  # Private attribute
-        self.__duration = duration  # Private attribute
+        self._name = name  # Private attribute
+        self._duration = duration  # Private attribute
     
     def get_details(self):  # Public method
-        return f"Ride Name: {self.__name}, Duration: {self.__duration} minutes"
+        return f"Ride Name: {self._name}, Duration: {self._duration} minutes"
 ```
 
 ---
@@ -57,8 +57,8 @@ Your task is to design a **Theme Park Adventure System** using OOP principles. T
 A base class for all attractions at the theme park.
 
 **Attributes**:  
-- `__name` (private): Name of the attraction.  
-- `__capacity` (private): Maximum number of people the attraction can hold.  
+- `_name` (private): Name of the attraction.  
+- `_capacity` (private): Maximum number of people the attraction can hold.  
 
 **Methods**:  
 - `__init__(name, capacity)`: Initializes the attraction's name and capacity.  
@@ -75,7 +75,7 @@ Represents high-adrenaline rides like roller coasters.
 
 **Attributes**:  
 - Inherits all attributes from `Attraction`.  
-- `__min_height` (private): Minimum height required to ride (in cm).  
+- `_min_height` (private): Minimum height required to ride (in cm).  
 
 **Methods**:  
 - `__init__(name, capacity, min_height)`: Initializes all attributes, including the new one.  
@@ -89,7 +89,7 @@ Represents family-friendly rides like carousels.
 
 **Attributes**:  
 - Inherits all attributes from `Attraction`.  
-- `__min_age` (private): Minimum age to ride.  
+- `_min_age` (private): Minimum age to ride.  
 
 **Methods**:  
 - `__init__(name, capacity, min_age)`: Initializes all attributes, including the new one.  
@@ -104,8 +104,8 @@ Represents family-friendly rides like carousels.
 A base class for all theme park staff.
 
 **Attributes**:  
-- `__name` (private): Staff name.  
-- `__role` (private): Role of the staff member (e.g., "Operator").  
+- `_name` (private): Staff name.  
+- `_role` (private): Role of the staff member (e.g., "Operator").  
 
 **Methods**:  
 - `__init__(name, role)`: Initializes the staff details.  
@@ -117,9 +117,9 @@ A base class for all theme park staff.
 A class representing visitors at the theme park.
 
 **Attributes**:  
-- `__name` (private): Visitor's name.  
-- `__age` (private): Visitor's age.  
-- `__height` (private): Visitor's height in cm.  
+- `_name` (private): Visitor's name.  
+- `_age` (private): Visitor's age.  
+- `_height` (private): Visitor's height in cm.  
 
 **Methods**:  
 - `__init__(name, age, height)`: Initializes the visitor details.  
@@ -160,7 +160,7 @@ Develop a **Park Management System** with the following additional features:
 
 #### 1. **Staff Management**  
 Add a `Manager` subclass to `Staff` with attributes:  
-- `__team` (private): A list of `Staff` objects reporting to the manager.  
+- `_team` (private): A list of `Staff` objects reporting to the manager.  
 
 **Methods**:  
 - `add_staff(staff)`: Adds a `Staff` object to the manager's team.  
